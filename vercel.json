@@ -1,9 +1,4 @@
 {
-    "build": {
-        "env": {
-            "NPM_FLAGS": "--legacy-peer-deps"
-        }
-    },
     "builds": [
         {
             "src": "package.json",
@@ -12,5 +7,8 @@
                 "distDir": "build"
             }
         }
-    ]
+    ],
+    "env": {
+        "NPM_FLAGS": "--legacy-peer-deps"
+    }
 }
