@@ -1,9 +1,10 @@
+import port from "../../../help"
 
 
 const getVehicleDetail = async (vehicleID) => {
     try {
 
-        const res = await fetch("http://localhost:8080/api/v1/users/bookedVehicle", {
+        const res = await fetch(`${port}/api/v1/users/bookedVehicle`, {
             method: "POST",
             headers: {
                 "Accept": "application/json",

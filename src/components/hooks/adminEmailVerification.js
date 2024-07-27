@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import port from '../../../help';
 
 
 
@@ -7,7 +8,7 @@ const verifyEmail = async (email) => {
 
     console.log(email)
     try {
-        const res = await fetch("http://localhost:8080/api/v1/adminVerify/adminLogin", {
+        const res = await fetch(`${port}/api/v1/adminVerify/adminLogin`, {
             method: "POST",
             headers: {
                 "Accept": "application/json",
@@ -34,7 +35,7 @@ const generateAccessTokenForAdmin = async () => {
 
     try {
         const phoneNumber = 7903499364
-        const res = await fetch("http://localhost:8080/api/v1/adminVerify/adminLogin/accessToken", {
+        const res = await fetch(`${port}/api/v1/adminVerify/adminLogin/accessToken`, {
             method: "POST",
             headers: {
                 "Accept": "application/json",

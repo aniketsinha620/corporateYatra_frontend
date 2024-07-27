@@ -68,6 +68,7 @@ import { CircularProgress } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import BackgroundBeams from '../components/ui/background-beams.js';
 import { toast } from 'react-hot-toast';
+import port from '../../help.js';
 
 
 
@@ -100,7 +101,7 @@ const Register = () => {
             formDataToSend.append(key, value);
         });
         try {
-            const response = await axios.post('http://localhost:8080/api/v1/users/register', formDataToSend, {
+            const response = await axios.post(`${port}/api/v1/users/register`, formDataToSend, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 }

@@ -183,7 +183,7 @@ export default function Booking(props) {
             try {
                 const vehicleID = props.vehicleID;
                 console.log(vehicleID);
-                const res = await fetch("http://localhost:8080/api/v1/users/bookedVehicle", {
+                const res = await fetch(`${port}/api/v1/users/bookedVehicle`, {
                     method: "POST",
                     headers: {
                         "Accept": "application/json",

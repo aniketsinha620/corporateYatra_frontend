@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import port from '../../../../help';
 
 const AdminTravel = () => {
     const [travels, setTravel] = useState([]);
@@ -7,7 +8,7 @@ const AdminTravel = () => {
     useEffect(() => {
         const fetchTravelHistory = async () => {
             try {
-                const res = await fetch("http://localhost:8080/api/v1/adminVerify//adminGetTravelRecord", {
+                const res = await fetch(`${port}/api/v1/adminVerify//adminGetTravelRecord`, {
                     method: "GET",
                     headers: {
                         Accept: "application/json",

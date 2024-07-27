@@ -6,6 +6,7 @@ import { OpenStreetMapProvider } from 'leaflet-geosearch';
 import Card_bus from './Card_bus';
 import { CircularProgress } from '@mui/material';
 import Footer from '../Footer';
+import port from '../../../help';
 const places = [
   {
     name: 'ALKUSAA GATE',
@@ -60,7 +61,7 @@ export default function Service() {
     try {
       console.log(sendSource, sendDestination);
 
-      const res = await fetch("http://localhost:8080/api/v1/users/findTheVehicle", {
+      const res = await fetch(`${port}/api/v1/users/findTheVehicle`, {
         method: "POST",
         headers: {
           Accept: "application/json",

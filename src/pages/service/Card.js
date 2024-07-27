@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import VehicleCard from "./vehicleCard.js";
 import { CircularProgress } from '@mui/material';
+import port from '../../../help.js';
 
 
 export default function Card(props) {
@@ -11,7 +12,7 @@ export default function Card(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('http://localhost:8080/api/v1/admin/getRegistedVehicle', {
+        const res = await fetch(`${port}/api/v1/admin/getRegistedVehicle`, {
           method: "GET",
           headers: {
             Accept: "application/json",

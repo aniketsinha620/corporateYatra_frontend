@@ -1,6 +1,8 @@
+import port from "../../../help"
+
 const travelHistory = async () => {
     try {
-        const res = await fetch("http://localhost:8080/api/v1/users/getTravelHistory", {
+        const res = await fetch(`${port}/api/v1/users/getTravelHistory`, {
             method: "GET",
             headers: {
                 "Accept": "application/json",

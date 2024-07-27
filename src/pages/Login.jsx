@@ -7,6 +7,7 @@ import { useAuthContext } from '../components/context/AuthContext';
 import { CircularProgress } from '@mui/material';
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-hot-toast';
+import port from "../../help.js";
 const Signup = () => {
   const [formData, setFormData] = useState({
     email: '',
@@ -23,7 +24,7 @@ const Signup = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await fetch('http://localhost:8080/api/v1/users/login', {
+      const res = await fetch(`${port}/api/v1/users/login`, {
         method: "POST",
         headers: {
           Accept: "application/json",

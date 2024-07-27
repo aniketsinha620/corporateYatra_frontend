@@ -299,6 +299,7 @@ import { useAuthContext } from '../context/AuthContext';
 import { FaRegEdit } from "react-icons/fa";
 import { toast } from 'react-hot-toast';
 import { CircularProgress } from '@mui/material';
+import port from '../../../help';
 
 const Profile = () => {
     const { authUser, setAuthUser } = useAuthContext();
@@ -320,7 +321,7 @@ const Profile = () => {
 
     const registerChanges = async (department, address, jobTitle, phoneNumber) => {
         try {
-            const res = await fetch('http://localhost:8080/api/v1/users/updateUser', {
+            const res = await fetch(`${port}/api/v1/users/updateUser`, {
                 method: 'POST',
                 headers: {
                     Accept: "application/json",
