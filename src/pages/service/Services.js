@@ -6,7 +6,7 @@ import { OpenStreetMapProvider } from 'leaflet-geosearch';
 import Card_bus from './Card_bus';
 import { CircularProgress } from '@mui/material';
 import Footer from '../Footer';
-import port from '../../../help';
+import port from '../../help';
 const places = [
   {
     name: 'ALKUSAA GATE',

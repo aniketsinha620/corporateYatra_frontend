@@ -299,7 +299,7 @@ import { useAuthContext } from '../context/AuthContext';
 import { FaRegEdit } from "react-icons/fa";
 import { toast } from 'react-hot-toast';
 import { CircularProgress } from '@mui/material';
-import port from '../../../help';
+import port from '../../help.js';
 
 const Profile = () => {
     const { authUser, setAuthUser } = useAuthContext();

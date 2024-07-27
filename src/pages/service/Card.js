@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import VehicleCard from "./vehicleCard.js";
 import { CircularProgress } from '@mui/material';
-import port from '../../../help.js';
+import port from '../../help.js';
 
 
 export default function Card(props) {

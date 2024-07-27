@@ -7,7 +7,7 @@ import Card_bus from '../service/Card_bus';
 // import car04 from '../../homeassets/car04.png'
 import Footer from '../Footer';
 import { CircularProgress } from '@mui/material';
-import port from '../../../help';
+import port from '../../help.js';
 const places = [
     {
         name: 'ALKUSAA GATE',
