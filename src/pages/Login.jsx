@@ -7,6 +7,7 @@ import { useAuthContext } from '../components/context/AuthContext';
 import { CircularProgress } from '@mui/material';
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-hot-toast';
+import Cookies from 'js-cookie'
 import port from "../help.js";
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -33,11 +34,17 @@ const Signup = () => {
         credentials: "include",
         body: JSON.stringify(formData)
       })
+
       setLoading(false)
+
       const data = await res.json();
+      console.log(data);
       const destructureData = data.data.user
+      Cookies.set('accessToken', data.accessToken)
+      Cookies.set('refreshToken', data.refreshToken)
       console.log(destructureData)
       toast.success("Suceesfully Registered");
+
       localStorage.setItem("User", JSON.stringify(destructureData));
       setAuthUser(destructureData)
       navigate('/')
