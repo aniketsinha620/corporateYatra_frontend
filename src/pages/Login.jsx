@@ -36,18 +36,21 @@ const Signup = () => {
       })
 
       setLoading(false)
+      if (res) {
+        const data = await res.json();
+        const destructureData = data.data.user
+        Cookies.set('accessToken', data.data.accessToken)
+        Cookies.set('refreshToken', data.data.refreshToken)
 
-      const data = await res.json();
-      console.log(data);
-      const destructureData = data.data.user
-      Cookies.set('accessToken', data.accessToken)
-      Cookies.set('refreshToken', data.refreshToken)
-      console.log(destructureData)
-      toast.success("Suceesfully Registered");
 
-      localStorage.setItem("User", JSON.stringify(destructureData));
-      setAuthUser(destructureData)
-      navigate('/')
+        toast.success("Suceesfully Registered");
+
+        localStorage.setItem("User", JSON.stringify(destructureData));
+        setAuthUser(destructureData)
+        navigate('/')
+      }
+
+
     } catch (error) {
       console.log(error)
       setLoading(false)
