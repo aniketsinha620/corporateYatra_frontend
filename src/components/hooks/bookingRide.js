@@ -1,5 +1,5 @@
 import port from "../../help"
-
+import Cookies from "js-cookie"
 
 const handleBookRideRegistration = async (sendDestination, sendSource, vehicleID) => {
 
