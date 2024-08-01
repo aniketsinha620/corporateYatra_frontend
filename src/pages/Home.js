@@ -6,10 +6,11 @@ import routeopti from '../homeassets/routehai.svg'
 import realtime from '../homeassets/realtimetracking.svg'
 import analytic from '../homeassets/analytic.svg'
 import pathselection from '../homeassets/pathselection.svg'
+import { TypeAnimation } from 'react-type-animation';
 import { Link } from 'react-router-dom'
 import './Home.css'
 import Footer from './Footer'
-import Hero from './Hero'
+import Hero1 from './Hero1.jsx'
 import Contact from './Contact'
 import BackgroundBeams from '../components/ui/background-beams'
 import { motion } from "framer-motion";
@@ -24,60 +25,12 @@ const Home = () => {
 
 
 
-  <section className='firstabout mt-[70px] w-[100%] hidden md:block'>
-        <div className='aboutmainview flex w-[100%]'>
-          <div className='mainview-left  md:[40%] mt-[20vh] pl-[20px]'>
-            <div className='text-[24px]'>Streamline Your Ride Booking Experience with Our Tracking Website </div>
-            <div className='mt-[20px]'> <button className='btnsweet text-[20px]'>Explore more</button> </div>
-          </div>
-          <div className='landingimagehai w-[60%]' >
-            <img src='./car05.png' alt="Students"
-              widht={55}
-              height={49}
-              loading='lazy'
-            />
-
-          </div>
-        </div>
-
-      </section>
-      <div className="  mt-[80px] block md:hidden">
-        <div className="bg-cover bg-center w-full h-screen " style={{ backgroundImage: "url('photo-.avif')" }}>
-          <div className="flex justify-center align-center h-screen item-center  flex ">
-            <div className="absolute inset-0 bg-black opacity-10 top-20"></div>
-            <div className="text-white text-center  flex flex-col justify-center">
-              <h1 className="text-2xl md:text-6xl font-bold">Streamline Your Ride Booking Experience with Our Tracking Website</h1>
-              <div className='mt-[20px]'> <button className='btnsweet'>Explore more</button> </div>
-            </div>
-          </div>
-        </div>
-      </div>  
-      {/* <section className='mt-[20px]'>
-        <LampContainer>
-          <motion.h1
-            initial={{ opacity: 0.5, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 0.3,
-              duration: 0.8,
-              ease: "easeInOut",
-            }}
-            className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
-          >
-           Streamline Your Ride Booking Experience with Our Tracking Website
-          </motion.h1>
-        </LampContainer>
-
-      </section> */}
-
-
-
-      {/*  background-color: #696969; */}
+      <Hero1 />
 
       <section className='p-0 '>
         <div className='vichiledivhai'>
           <div className='vechieleselection ml-0 text-[30px] w-[100%]'>Vehicle Selection Process</div>
-          <div className='textselectionprocess text-white'>A4 network provide you a simplest way to select your seat with help of illustration and map so that you can easily use our interface</div>
+          <div className='textselectionprocess text-white'>ℭ𝔬𝔯𝔭𝔬𝔯𝔞𝔱𝔢यात्रा  network provide you a simplest way to select your seat with help of illustration and map so that you can easily use our interface</div>
           <div className='selctionpathclass p-4'>   <img src={pathselection} alt="Students"
             widht={80}
             height={69}

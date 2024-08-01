@@ -685,3 +685,17 @@ ol {
     flex-direction: row;
     gap: 1rem;
 }
+
+/* .mainHero1 {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 2%, rgba(0,1,3,1) 91%);
+} */
+.mainHero1{
+    position: absolute;
+    padding: 5rem;
+    bottom: 0px;
+  
+    background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
+    opacity: 1;
+    transition: opacity .3s;
+}

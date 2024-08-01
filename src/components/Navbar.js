@@ -41,27 +41,23 @@ const Navbar = () => {
 
 
     return (
-        <nav className='fixed top-0  pt-3 md:pt-0 w-full z-[100] '>
+        <nav className='fixed top-8  pt-3 md:pt-0 w-full z-[100] bg-gray-300/5 rounded-full md:px-8 px-0'>
             <div className='md:flex justify-between items-center'>
                 <div className='ml-3 flex md:justify-center md:align-center  md:align-center items-center gap-2 p-1'>
                     <img src='/LOGO.png' style={{ width: '50px' }}></img>
                     <h1 className='text-white text-[20px]'>ℭ𝔬𝔯𝔭𝔬𝔯𝔞𝔱𝔢यात्रा   </h1>
                 </div>
-                <div className='fixed top-3 right-4 text-xl md:hidden  text-white' onClick={handleClick}>
+                <div className='fixed top-14 right-4 text-2xl md:hidden  text-white' onClick={handleClick}>
                     {verify ? <IoMdClose /> : <CiMenuFries />}
                 </div>
 
-                <ul className={` md:flex  text-[Poppins] md:w-[40%] md:justify-between items-center text-[14px] md:static absolute w-full left-0 p-3  z-[100] md:z-auto    md:bg-transparent ${verify ? "border-b-2 border-black rounded top-10 text-white" : " top-[-280px] "} `}>
+                <ul className={` md:flex  text-[Poppins] md:w-[40%] md:justify-between items-center text-[14px] md:static absolute w-full left-0 p-3  z-[100] md:z-auto    md:bg-transparent ${verify ? "border-b-2 border-black rounded top-10 text-white bg-gray-300/5" : " top-[-280px] "} `}>
                     {Links.map((ele, index) => (
                         <li key={index} className=' m-5 md:m-0 md:hover:underline '>
                             <a href={ele.link}>{ele.name}</a>
                         </li>
                     ))}
                     {authUser ?
-                        // <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
-
-                        //     <img src={authUser.avatar} alt="Avatar" className="w-full h-full object-cover" />
-                        // </div>
                         <div>
                             <div
                                 id="basic-button"
@@ -93,7 +89,7 @@ const Navbar = () => {
                         </div>
                         :
                         <button className='border border-solid h-[40px] bg-black text-white py-2 flex items-center justify-center  px-4 rounded ml-4'>
-                            <a href="/login">login</a>
+                            <a href="/login">Login</a>
                         </button>}
 
 
