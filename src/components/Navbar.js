@@ -41,7 +41,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className='fixed top-8  pt-3 md:pt-0 w-full z-[100] bg-gray-300/5 rounded-full md:px-8 px-0'>
+        <nav className='fixed top-8  pt-3 md:pt-0 w-full z-[100] bg-gray-200/5 rounded-full md:px-8 px-0'>
             <div className='md:flex justify-between items-center'>
                 <div className='ml-3 flex md:justify-center md:align-center  md:align-center items-center gap-2 p-1'>
                     <img src='/LOGO.png' style={{ width: '50px' }}></img>
@@ -65,7 +65,7 @@ const Navbar = () => {
                                 aria-haspopup="true"
                                 aria-expanded={open ? 'true' : undefined}
                                 onClick={handleClick1}
-                                className="w-16 h-16 rounded-full overflow-hidden mr-2"
+                                className="w-12 h-12 rounded-full overflow-hidden mr-2"
                             >
                                 <img
                                     src={authUser.avatar}

@@ -9,10 +9,10 @@ import pathselection from '../homeassets/pathselection.svg'
 import { TypeAnimation } from 'react-type-animation';
 import { Link } from 'react-router-dom'
 import './Home.css'
-import Footer from './Footer'
+import Footer from './Footer.js'
 import Hero1 from './Hero1.jsx'
-import Contact from './Contact'
-import BackgroundBeams from '../components/ui/background-beams'
+import Contact from './Contact.jsx'
+import BackgroundBeams from '../components/ui/background-beams.js'
 import { motion } from "framer-motion";
 import { LampContainer } from "../components/ui/lamp.js";
 
@@ -23,9 +23,22 @@ const Home = () => {
   return (
     <div className='wrapup'>
 
+      <div className='w-full md:block  hidden'>
 
+        <Hero1 />
 
-      <Hero1 />
+      </div>
+      <div className="  mt-[80px] block md:hidden">
+        <div className="bg-cover bg-center w-full h-screen " style={{ backgroundImage: "url('photo-.avif')" }}>
+          <div className="flex justify-center align-center h-screen item-center  flex ">
+            <div className="absolute inset-0 bg-black opacity-10 top-20"></div>
+            <div className="text-white text-center  flex flex-col justify-center">
+              <h1 className="text-2xl md:text-6xl font-bold">Streamline Your Ride Booking Experience with Our Tracking Website</h1>
+              <div className='mt-[20px]'> <button className='btnsweet'>Explore more</button> </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section className='p-0 '>
         <div className='vichiledivhai'>

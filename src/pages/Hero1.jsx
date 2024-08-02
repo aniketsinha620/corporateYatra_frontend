@@ -19,7 +19,8 @@ const Hero = () => {
             </div>
             <div className='mainHero1 w-full opacity-10 text-grey-500 '>
 
-                <div className='bg-gray-300/5 rounded-full w-[90%] '>
+                <div className='md:bg-gray-300/5 md:rounded-full md:w-[90%]'>
+                
                     <TypeAnimation
                         sequence={[
 
