@@ -15,10 +15,22 @@ import Contact from './Contact.jsx'
 import BackgroundBeams from '../components/ui/background-beams.js'
 import { motion } from "framer-motion";
 import { LampContainer } from "../components/ui/lamp.js";
+import CommentSection from './CommentSection.jsx'
 
 
 
 const Home = () => {
+
+
+  const CommentData = [
+    { username: "Rajeev M.", comment: "The booking system works well most of the time." },
+    { username: "Aisha P.", comment: "The user interface is clean, but dynamic routing can be slow." },
+    { username: "Vikram R.", comment: "I like how the app tracks my travel history." },
+    { username: "Megha T.", comment: "The admin panel is quite helpful for adding vehicles." },
+    { username: "Sunil K.", comment: "Corporate Yatra is a great solution for vehicle bookings." }
+  ];
+
+
 
   return (
     <div className='wrapup'>
@@ -70,7 +82,7 @@ const Home = () => {
 
 
       <section>
-        <div className='vechieleselection  ml-0 text-[40px] mt-[40px]  w-[100%]'>
+        <div className='vechieleselection  ml-10 text-[40px] mt-[40px]  w-[100%]'>
           Vehicle Type Selection
         </div>
         <div className='primisesdivhai mt-[40px]  flex flex-col md:flex-row '>
@@ -108,75 +120,21 @@ const Home = () => {
 
       </section>
 
-      <section>
-        <div className='mt-[40px]'>
-          <div className='Reviewhaibhai'>Review’s</div>
-          <div className='reviewsectionhai flex flex-col gap-3 md:flex-row flex-grow'>
-            <div class="max-w-md mx-auto bg-[#696969]  rounded-xl shadow-md overflow-hidden md:max-w-xl">
-              <div class="p-0 md:p-8 flex">
-                <div class="flex items-center justify-center w-[40%] md:w-[20%]">
-                  <img class="h-20 w-20 object-cover rounded-full" src={review3} alt="Profile Picture" />
-                </div>
-                <div class="mt-4 w-[60%] md:w-[80%]">
-                  <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Comment</div>
-                  <p class="mt-2  text-[10px] md:text-[15px] text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mauris ut tellus efficitur lobortis. Integer sed elit eu urna varius accumsan.</p>
-                  <div class="mt-4">
-                    <div class="flex items-center">
-                      <div class="ml-3">
-                        <div class="text-gray-900 font-semibold">John Doe</div>
-                        <div class="text-gray-600">Developer</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div className='vechieleselection  ml-10 text-[40px] mt-[40px]  w-[100%]'>
+        Review’s
+      </div>
+      <section className='m-20 flex flex-wrap gap-7'>
 
-            <div class="max-w-md mx-auto bg-[#696969]  rounded-xl shadow-md overflow-hidden md:max-w-xl">
-              <div class="p-0 md:p-8 flex">
-                <div class="flex items-center justify-center w-[40%] md:w-[20%]">
-                  <img class="h-20 w-20 object-cover rounded-full" src={review2} alt="Profile Picture" />
-                </div>
-                <div class="mt-4 w-[60%] md:w-[80%]">
-                  <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Comment</div>
-                  <p class="mt-2  text-[10px] md:text-[15px] text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mauris ut tellus efficitur lobortis. Integer sed elit eu urna varius accumsan.</p>
-                  <div class="mt-4">
-                    <div class="flex items-center">
-                      <div class="ml-3">
-                        <div class="text-gray-900 font-semibold">John Doe</div>
-                        <div class="text-gray-600">Developer</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="max-w-md mx-auto bg-[#696969]  rounded-xl shadow-md overflow-hidden md:max-w-xl">
-              <div class="p-0 md:p-8 flex">
-                <div class="flex items-center justify-center w-[40%] md:w-[20%]">
-                  <img class="h-20 w-20 object-cover rounded-full" src={review1} alt="Profile Picture" />
-                </div>
-                <div class="mt-4 w-[60%] md:w-[80%]">
-                  <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Comment</div>
-                  <p class="mt-2  text-[10px] md:text-[15px] text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mauris ut tellus efficitur lobortis. Integer sed elit eu urna varius accumsan.</p>
-                  <div class="mt-4">
-                    <div class="flex items-center">
-                      <div class="ml-3">
-                        <div class="text-gray-900 font-semibold">John Doe</div>
-                        <div class="text-gray-600">Developer</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
+        {
+          CommentData.map((data, index) => (
+            <CommentSection
+              key={index}
+              comment={data.comment}
+              username={data.username}  
+            />
+          ))
+        }
       </section>
-
 
 
       <section>
